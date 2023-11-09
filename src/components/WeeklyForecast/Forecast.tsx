@@ -9,7 +9,8 @@ const Forecast = ({ weather }: IForecastProps) => {
   return (
 		<div className={styles.forecast}>
 			<p className={styles.day}>Sunday</p>
-			{/* <div dangerouslySetInnerHTML={{ __html: generateWeatherIcon(weather.type) }}></div> */}
+			<div dangerouslySetInnerHTML={{ __html: generateWeatherIcon(weather.type) }}></div>
+			<p className={styles.degree}>{weather.degree}°</p>
 		</div>
 	)
 }

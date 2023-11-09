@@ -2,14 +2,16 @@
   grid-area: weeklyForecast;
   border-radius: 27px;
   background: rgba(196, 195, 193, 0.40);
-  padding: 46px 10px;
-
+  padding: 40px 16px;
+  overflow: hidden;
+  
   .slider {
     height: 100%;
     width: 100%;
   }
   
   .sliderItem {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +19,7 @@
 }
 
 .forecast {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,9 +28,47 @@
   .day {
     font-size: 12px;
   }
-
+  
   .degree {
     font-size: 24px;
     font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .forecast {
+    .day {
+      font-size: 10px;
+    }
+    
+    .degree {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding: 20px 8px;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .forecast {
+    .day {
+      font-size: 8px;
+    }
+    
+    .degree {
+      font-size: 12px;
+    }
   }
 }
