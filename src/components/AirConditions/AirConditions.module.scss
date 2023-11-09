@@ -60,3 +60,53 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .container {
+    gap: 16px;
+    
+    .time {
+      justify-content: center;
+      gap: 20px;
+      
+      p {
+        font-size: 24px;
+      }
+    }
+    
+    .title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    gap: 16px;
+    
+    .time {
+      gap: 12px;
+      
+      p {
+        font-size: 16px;
+      }
+    }
+    
+    .title {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    
+    .information {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      
+      .informationSingle {
+        padding-left: 0;
+        margin: 0 auto;
+      }
+    }
+  }
+}
