@@ -11,10 +11,10 @@ html {
 }
 
 body {
+  height: 100vh;
   padding: 32px 26px;
   color: #ffffff;
   background: url('./assets/bg.jpeg') lightgray 50% / cover no-repeat;
-;
 }
 
 main {
@@ -24,6 +24,6 @@ main {
     "info info hourlyForecast"
     "menu activities airConditions"
     "menu weeklyForecast airConditions";
-  grid-template-rows: 1fr 300px 300px;
-  grid-template-columns: 188px 1fr 600px;
+  grid-template-rows: 300px 300px 1fr;
+  grid-template-columns: 188px 900px 1fr;
 }
