@@ -14,3 +14,13 @@ body {
   color: #ffffff;
   background: #000;
 }
+
+main {
+  display: grid;
+  gap: 24px;
+  grid-template-areas: 
+    "info info hourlyForecast"
+    "menu activities airConditions"
+    "menu weeklyForecast airConditions"
+  ;
+}

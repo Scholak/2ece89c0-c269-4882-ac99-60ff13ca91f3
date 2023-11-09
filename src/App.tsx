@@ -2,9 +2,9 @@ import { Activities } from './components'
 
 const App = () => {
   return (
-    <div>
+    <main>
       <Activities />
-    </div>
+    </main>
   )
 }
 
