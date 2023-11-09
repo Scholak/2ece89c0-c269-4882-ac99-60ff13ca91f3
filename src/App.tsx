@@ -1,4 +1,4 @@
-import { Activities, Menu, Info, AirConditions } from './components'
+import { Activities, Menu, Info, AirConditions, WeeklyForecast } from './components'
 
 const App = () => {
   return (
@@ -6,6 +6,7 @@ const App = () => {
 			<Menu />
 			<Info />
 			<Activities />
+			<WeeklyForecast />
 			<AirConditions />
 		</main>
 	)

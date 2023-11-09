@@ -1,0 +1,33 @@
+.container {
+  grid-area: weeklyForecast;
+  border-radius: 27px;
+  background: rgba(196, 195, 193, 0.40);
+  padding: 46px 10px;
+
+  .slider {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sliderItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  .day {
+    font-size: 12px;
+  }
+
+  .degree {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
