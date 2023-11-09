@@ -1,6 +1,6 @@
 import styles from './HourlyForecast.module.scss'
 import logo from '../../assets/logoLong.png'
-import { Label, LabelList, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import {  LabelList, Line, LineChart, ResponsiveContainer } from 'recharts'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 
