@@ -25,7 +25,7 @@ main {
     "info info hourlyForecast"
     "menu activities airConditions"
     "menu weeklyForecast airConditions";
-  grid-template-columns: 2fr 9fr 7fr;
+  grid-template-columns: 3fr 9fr 7fr;
 }
 
 @media screen and (max-width: 1600px) {
