@@ -1,9 +1,10 @@
-import { Activities, Menu } from './components'
+import { Activities, Menu, Info } from './components'
 
 const App = () => {
   return (
 		<main>
 			<Menu />
+			<Info />
 			<Activities />
 		</main>
 	)
