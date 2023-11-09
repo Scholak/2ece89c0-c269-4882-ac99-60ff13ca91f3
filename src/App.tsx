@@ -1,6 +1,10 @@
+import { Activities } from './components'
+
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Activities />
+    </div>
   )
 }
 
