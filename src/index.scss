@@ -21,6 +21,7 @@ main {
   grid-template-areas: 
     "info info hourlyForecast"
     "menu activities airConditions"
-    "menu weeklyForecast airConditions"
-  ;
+    "menu weeklyForecast airConditions";
+  grid-template-rows: repeat(3, 306px);
+  grid-template-columns: 188px 1fr 600px;
 }

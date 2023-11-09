@@ -1,11 +1,12 @@
-import { Activities } from './components'
+import { Activities, Menu } from './components'
 
 const App = () => {
   return (
-    <main>
-      <Activities />
-    </main>
-  )
+		<main>
+			<Menu />
+			<Activities />
+		</main>
+	)
 }
 
 export default App

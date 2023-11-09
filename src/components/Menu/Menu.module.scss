@@ -1,0 +1,39 @@
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  padding: 42px 44px;
+  border-radius: 27px;
+  background: rgba(196, 195, 193, 0.40);
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    color: #C4C3C1;
+
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+
+      &:first-child {
+        color: #ffffff;
+
+        p {
+          margin-top: 4px;
+        }
+      }
+
+      p {
+        font-size: 10px;
+        font-weight: 600;
+      }
+    }
+  }
+}
