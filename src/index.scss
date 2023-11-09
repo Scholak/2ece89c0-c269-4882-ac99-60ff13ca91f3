@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  padding: 32px 26px;
   color: #ffffff;
   background: #000;
 }
@@ -22,6 +23,6 @@ main {
     "info info hourlyForecast"
     "menu activities airConditions"
     "menu weeklyForecast airConditions";
-  grid-template-rows: repeat(3, 306px);
+  grid-template-rows: 1fr 300px 300px;
   grid-template-columns: 188px 1fr 600px;
 }
