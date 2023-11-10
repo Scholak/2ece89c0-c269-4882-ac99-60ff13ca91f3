@@ -1,12 +1,12 @@
 import { useSelector } from 'react-redux'
-import styles from './WeeklyForecast.module.scss'
-import { RootState } from '../../redux/store'
-import Forecast from './Forecast'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
+import { RootState } from '../../redux/store'
+import { prepareWeeklyWeather } from '../../utils/prepareWeeklyWeather'
+import Forecast from './Forecast'
+import styles from './WeeklyForecast.module.scss'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { prepareWeeklyWeather } from '../../utils/prepareWeeklyWeather'
 
 const WeeklyForecast = () => {
   const { weeklyWeather } = useSelector((state: RootState) => state.weather)

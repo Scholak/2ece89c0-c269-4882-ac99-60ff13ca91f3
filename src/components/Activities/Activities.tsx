@@ -1,11 +1,11 @@
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { moveToTop } from '../../animations/moveToTop'
 import styles from './Activities.module.scss'
 import img1 from '../../assets/img1.png'
 import img2 from '../../assets/img2.png'
 import img3 from '../../assets/img3.png'
 import img4 from '../../assets/img4.png'
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { moveToTop } from '../../animations/moveToTop'
 
 const Activities = () => {
 	const titleRef = useRef<HTMLDivElement>(null)

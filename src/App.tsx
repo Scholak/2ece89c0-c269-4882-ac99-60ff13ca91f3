@@ -3,12 +3,12 @@ import { Activities, Menu, Info, AirConditions, WeeklyForecast, HourlyForecast }
 const App = () => {
   return (
 		<main>
-			<Menu />
 			<Info />
-			<Activities />
 			<HourlyForecast />
-			<WeeklyForecast />
+			<Menu />
+			<Activities />
 			<AirConditions />
+			<WeeklyForecast />
 		</main>
 	)
 }

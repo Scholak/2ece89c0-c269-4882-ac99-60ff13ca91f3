@@ -1,21 +1,21 @@
-import styles from './HourlyForecast.module.scss'
-import logo from '../../assets/logoLong.png'
-import {  LabelList, Line, LineChart, ResponsiveContainer } from 'recharts'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { LabelList, Line, LineChart, ResponsiveContainer } from 'recharts'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { DegreeLabel, HourLabel, WeatherLabel, WindLabel } from './Labels'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
 import { moveToTop } from '../../animations/moveToTop'
+import styles from './HourlyForecast.module.scss'
+import logo from '../../assets/logoLong.png'
 
 const HourlyForecast = () => {
-  const { forecast } = useSelector((state: RootState) => state.weather)
+	const { forecast } = useSelector((state: RootState) => state.weather)
 
 	const logoRef = useRef<HTMLImageElement>(null)
 
 	const logoView = useInView(logoRef)
 
-  const data = [
+	const data = [
 		{
 			pv: 100,
 			degree: `${forecast['08:00']}°`,
@@ -235,7 +235,7 @@ const HourlyForecast = () => {
 		},
 	]
 
-  return (
+	return (
 		<div className={styles.container}>
 			<motion.img
 				src={logo}

@@ -1,16 +1,16 @@
-import styles from './Info.module.scss'
-import locationIcon from '../../assets/locationIcon.png'
-import thunderIcon from '../../assets/thunderIcon.png'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../redux/store'
-import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { motion, useInView } from 'framer-motion'
+import { RootState } from '../../redux/store'
 import { moveToLeft } from '../../animations/moveToLeft'
 import { moveToTop } from '../../animations/moveToTop'
 import { moveToRight } from '../../animations/moveToRight'
+import styles from './Info.module.scss'
+import locationIcon from '../../assets/locationIcon.png'
+import thunderIcon from '../../assets/thunderIcon.png'
 
 const Info = () => {
-  const { city, type, degree } = useSelector((state: RootState) => state.weather)
+	const { city, type, degree } = useSelector((state: RootState) => state.weather)
 
 	const locationRef = useRef<HTMLDivElement>(null)
 	const typeRef = useRef<HTMLParagraphElement>(null)
@@ -24,7 +24,7 @@ const Info = () => {
 	const dateView = useInView(dateRef)
 	const iconView = useInView(iconRef)
 
-  return (
+	return (
 		<div className={styles.container}>
 			<div className={styles.left}>
 				<motion.div

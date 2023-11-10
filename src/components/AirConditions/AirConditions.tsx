@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux'
-import styles from './AirConditions.module.scss'
-import { RootState } from '../../redux/store'
-import mountain from '../../assets/mountain.png'
-import windIcon from '../../assets/windIcon.png'
 import { useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
 import { motion, useInView } from 'framer-motion'
 import { moveToTop } from '../../animations/moveToTop'
 import { moveToLeft } from '../../animations/moveToLeft'
 import { moveToRight } from '../../animations/moveToRight'
+import styles from './AirConditions.module.scss'
+import mountain from '../../assets/mountain.png'
+import windIcon from '../../assets/windIcon.png'
 
 const AirConditions = () => {
-  const airConditions = useSelector((state: RootState) => state.weather.airConditions).split('::')
+	const airConditions = useSelector((state: RootState) => state.weather.airConditions).split('::')
 
 	const timeRef = useRef<HTMLDivElement>(null)
 	const titleRef = useRef<HTMLParagraphElement>(null)
@@ -26,7 +26,7 @@ const AirConditions = () => {
 	const infoThreeView = useInView(infoThreeRef)
 	const infoFourView = useInView(infoFourRef)
 
-  return (
+	return (
 		<div className={styles.container}>
 			<img src={mountain} alt='mountain image' className={styles.bg} />
 			<motion.div

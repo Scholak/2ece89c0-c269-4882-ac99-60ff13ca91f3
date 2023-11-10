@@ -1,10 +1,10 @@
-import styles from './Menu.module.scss'
-import logo from '../../assets/logo.png'
-import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { moveToRight } from '../../animations/moveToRight'
 import { moveToLeft } from '../../animations/moveToLeft'
 import { moveToTop } from '../../animations/moveToTop'
+import styles from './Menu.module.scss'
+import logo from '../../assets/logo.png'
 
 const Menu = () => {
 	const logoRef = useRef<HTMLImageElement>(null)
