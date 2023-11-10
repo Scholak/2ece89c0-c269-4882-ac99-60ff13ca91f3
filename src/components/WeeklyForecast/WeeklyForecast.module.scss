@@ -40,6 +40,7 @@
 @media screen and (max-width: 1600px) {
   .container {
     border-radius: 16px;
+    padding: 20px 8px;
     
     svg {
       width: 40px;
@@ -60,7 +61,7 @@
 
 @media screen and (max-width: 800px) {
   .container {
-    padding: 20px 8px;
+    padding: 10px 4px;
     border-radius: 8px;
     
     svg {

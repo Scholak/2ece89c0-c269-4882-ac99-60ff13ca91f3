@@ -37,6 +37,11 @@
 @media screen and (max-width: 1600px) {
   .container {
     border-radius: 16px;
+    padding: 8px 20px;
+    
+    .heading {
+      margin-bottom: 16px;
+    }
     
     .activityImages {
       grid-template-columns: repeat(2, 1fr);
@@ -47,6 +52,11 @@
 @media screen and (max-width: 800px) {
   .container {
     border-radius: 8px;
+    padding: 10px;
+    
+    .heading {
+      font-size: 20px;
+    }
     
     .activityImages {
       grid-template-columns: 1fr;
