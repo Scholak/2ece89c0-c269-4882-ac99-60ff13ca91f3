@@ -54,8 +54,6 @@ const WeeklyForecast = () => {
 						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.saturday, 'saturday')} />
 					</div>
 				</SwiperSlide>
-				<div className='prev'></div>
-				<div className='next'></div>
 			</Swiper>
 		</div>
 	)
