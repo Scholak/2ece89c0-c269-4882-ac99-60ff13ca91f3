@@ -12,9 +12,7 @@ export const WeatherLabel = (props: any) => {
 	const { x, y, value } = props
 
 	return (
-		<foreignObject width={50} height={50} x={x - 8} y={y + 10}>
-			{value}
-		</foreignObject>
+		<foreignObject width={20} height={20} x={x - 8} y={y + 10} dangerouslySetInnerHTML={{ __html: value }} />
 	)
 }
 
