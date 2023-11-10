@@ -26,6 +26,9 @@ You need to refresh page to view responsive design of each view. For example you
 - run the app &nbsp; `npm run dev` or &nbsp; `yarn dev`
 - visit &nbsp; http://localhost:5173
 
+## Live Demo
+https://funny-sorbet-8f1e41.netlify.app/
+
 ## Project Images
 
 ![](./assets/1.png)
