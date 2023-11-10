@@ -3,6 +3,7 @@ import logo from '../../assets/logoLong.png'
 import {  LabelList, Line, LineChart, ResponsiveContainer } from 'recharts'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
+import { DegreeLabel, HourLabel, WeatherLabel, WindLabel } from './Labels'
 
 const HourlyForecast = () => {
   const { forecast } = useSelector((state: RootState) => state.weather)
@@ -12,7 +13,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['08:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='18' height='17' viewBox='0 0 18 17' fill='none'>
-					<g clip-path='url(#clip0_8_435)'>
+					<g clipPath='url(#clip0_8_435)'>
 						<path
 							d='M4.1904 10.0237C4.04072 10.0764 3.89885 10.1456 3.76697 10.2292C3.17992 9.98631 2.63005 9.62496 2.1535 9.14513C0.218366 7.21653 0.218366 4.08131 2.1535 2.15271C2.35146 1.95491 2.55933 1.77688 2.78204 1.61864C3.15323 1.35654 3.73723 1.79666 3.69764 2.20711C3.56401 3.62141 4.03913 5.09012 5.12795 6.1731C5.54352 6.59022 6.0151 6.9172 6.51872 7.15432C5.19643 7.37273 4.18794 8.52137 4.18794 9.90555C4.18794 9.94512 4.18877 9.98451 4.1904 10.0237Z'
 							fill='white'
@@ -59,7 +60,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['15:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
-					<g clip-path='url(#clip0_8_403)'>
+					<g clipPath='url(#clip0_8_403)'>
 						<path
 							d='M3.06482 8.68956C3.1967 8.60598 3.33858 8.53674 3.48825 8.48405C3.48662 8.44487 3.48579 8.40548 3.48579 8.3659C3.48579 6.98172 4.49428 5.83309 5.81657 5.61468C5.31295 5.37756 4.84137 5.05058 4.42581 4.63346C3.33699 3.55048 2.86186 2.08177 2.99549 0.667465C3.03509 0.257019 2.45108 -0.183098 2.07989 0.0789941C1.85718 0.237238 1.64932 0.415263 1.45135 0.613068C-0.483783 2.54167 -0.483783 5.67688 1.45135 7.60548C1.9279 8.08531 2.47777 8.44667 3.06482 8.68956Z'
 							fill='white'
@@ -93,7 +94,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['18:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
-					<g clip-path='url(#clip0_8_403)'>
+					<g clipPath='url(#clip0_8_403)'>
 						<path
 							d='M3.06482 8.68956C3.1967 8.60598 3.33858 8.53674 3.48825 8.48405C3.48662 8.44487 3.48579 8.40548 3.48579 8.3659C3.48579 6.98172 4.49428 5.83309 5.81657 5.61468C5.31295 5.37756 4.84137 5.05058 4.42581 4.63346C3.33699 3.55048 2.86186 2.08177 2.99549 0.667465C3.03509 0.257019 2.45108 -0.183098 2.07989 0.0789941C1.85718 0.237238 1.64932 0.415263 1.45135 0.613068C-0.483783 2.54167 -0.483783 5.67688 1.45135 7.60548C1.9279 8.08531 2.47777 8.44667 3.06482 8.68956Z'
 							fill='white'
@@ -127,7 +128,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['21:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
-					<g clip-path='url(#clip0_8_403)'>
+					<g clipPath='url(#clip0_8_403)'>
 						<path
 							d='M3.06482 8.68956C3.1967 8.60598 3.33858 8.53674 3.48825 8.48405C3.48662 8.44487 3.48579 8.40548 3.48579 8.3659C3.48579 6.98172 4.49428 5.83309 5.81657 5.61468C5.31295 5.37756 4.84137 5.05058 4.42581 4.63346C3.33699 3.55048 2.86186 2.08177 2.99549 0.667465C3.03509 0.257019 2.45108 -0.183098 2.07989 0.0789941C1.85718 0.237238 1.64932 0.415263 1.45135 0.613068C-0.483783 2.54167 -0.483783 5.67688 1.45135 7.60548C1.9279 8.08531 2.47777 8.44667 3.06482 8.68956Z'
 							fill='white'
@@ -161,7 +162,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['21:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
-					<g clip-path='url(#clip0_8_403)'>
+					<g clipPath='url(#clip0_8_403)'>
 						<path
 							d='M3.06482 8.68956C3.1967 8.60598 3.33858 8.53674 3.48825 8.48405C3.48662 8.44487 3.48579 8.40548 3.48579 8.3659C3.48579 6.98172 4.49428 5.83309 5.81657 5.61468C5.31295 5.37756 4.84137 5.05058 4.42581 4.63346C3.33699 3.55048 2.86186 2.08177 2.99549 0.667465C3.03509 0.257019 2.45108 -0.183098 2.07989 0.0789941C1.85718 0.237238 1.64932 0.415263 1.45135 0.613068C-0.483783 2.54167 -0.483783 5.67688 1.45135 7.60548C1.9279 8.08531 2.47777 8.44667 3.06482 8.68956Z'
 							fill='white'
@@ -195,7 +196,7 @@ const HourlyForecast = () => {
 			degree: `${forecast['00:00']}°`,
 			Svg: (
 				<svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'>
-					<g clip-path='url(#clip0_8_403)'>
+					<g clipPath='url(#clip0_8_403)'>
 						<path
 							d='M3.06482 8.68956C3.1967 8.60598 3.33858 8.53674 3.48825 8.48405C3.48662 8.44487 3.48579 8.40548 3.48579 8.3659C3.48579 6.98172 4.49428 5.83309 5.81657 5.61468C5.31295 5.37756 4.84137 5.05058 4.42581 4.63346C3.33699 3.55048 2.86186 2.08177 2.99549 0.667465C3.03509 0.257019 2.45108 -0.183098 2.07989 0.0789941C1.85718 0.237238 1.64932 0.415263 1.45135 0.613068C-0.483783 2.54167 -0.483783 5.67688 1.45135 7.60548C1.9279 8.08531 2.47777 8.44667 3.06482 8.68956Z'
 							fill='white'
@@ -241,9 +242,14 @@ const HourlyForecast = () => {
 				</div>
 				<div className={styles.graph}>
 					<ResponsiveContainer width='100%' height='100%'>
-						<LineChart width={300} height={100} data={data}>
-							<Line type='monotone' dataKey='pv' stroke='#ffffff' strokeWidth={2} dot={false} />
-							<LabelList dataKey='pv' position='insideTop' />
+						<LineChart width={300} height={100} data={data} margin={{ top: 5, bottom: 5, left: 20, right: 20 }}>
+							<Line type='bump' dataKey='pv' stroke='#ffffff' dot={false}>
+								<LabelList content={<DegreeLabel />} dataKey='degree' />
+								<LabelList content={<WeatherLabel />} dataKey='Svg' />
+								<LabelList content={<WindLabel />} dataKey='wind' />
+								<LabelList content={<HourLabel />} dataKey='hour' />
+							</Line>
+							<LabelList dataKey='y' position='center' rotate={90} overflow='visible' />
 						</LineChart>
 					</ResponsiveContainer>
 				</div>
