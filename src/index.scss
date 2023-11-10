@@ -69,3 +69,10 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* Windows 11 overflow issue solution */
+@media screen and (width: 1536px) {
+  body {
+    zoom: 0.75;
+  }
+}
