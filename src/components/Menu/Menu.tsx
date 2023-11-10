@@ -1,13 +1,46 @@
 import styles from './Menu.module.scss'
 import logo from '../../assets/logo.png'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { moveToRight } from '../../animations/moveToRight'
+import { moveToLeft } from '../../animations/moveToLeft'
+import { moveToTop } from '../../animations/moveToTop'
 
 const Menu = () => {
+	const logoRef = useRef<HTMLImageElement>(null)
+	const itemOneRef = useRef<HTMLDivElement>(null)
+	const itemTwoRef = useRef<HTMLDivElement>(null)
+	const itemThreeRef = useRef<HTMLDivElement>(null)
+	const itemFourRef = useRef<HTMLDivElement>(null)
+
+	const logoView = useInView(logoRef)
+	const itemOneView = useInView(itemOneRef)
+	const itemTwoView = useInView(itemTwoRef)
+	const itemThreeView = useInView(itemThreeRef)
+	const itemFourView = useInView(itemFourRef)
+
   return (
 		<nav className={styles.menu}>
-			<img src={logo} alt='logo' className={styles.logo} />
+			<motion.img
+				src={logo}
+				alt='logo'
+				ref={logoRef}
+				variants={moveToTop}
+				initial='hidden'
+				transition={{ duration: 1, delay: 0.4 }}
+				animate={logoView ? 'visible' : 'hidden'}
+				className={styles.logo}
+			/>
 			<div>
 				<div className={styles.links}>
-					<div className={styles.link}>
+					<motion.div
+						ref={itemOneRef}
+						variants={moveToRight}
+						initial='hidden'
+						transition={{ duration: 1, delay: 0.6 }}
+						animate={itemOneView ? 'visible' : 'hidden'}
+						className={styles.link}
+					>
 						<svg xmlns='http://www.w3.org/2000/svg' width='95' height='86' viewBox='0 0 95 86' fill='none'>
 							<g clipPath='url(#clip0_2_180)'>
 								<path
@@ -54,8 +87,15 @@ const Menu = () => {
 							</defs>
 						</svg>
 						<p>weather</p>
-					</div>
-					<div className={styles.link}>
+					</motion.div>
+					<motion.div
+						ref={itemTwoRef}
+						variants={moveToLeft}
+						initial='hidden'
+						transition={{ duration: 1, delay: 0.65 }}
+						animate={itemTwoView ? 'visible' : 'hidden'}
+						className={styles.link}
+					>
 						<svg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35' fill='none'>
 							<path
 								fillRule='evenodd'
@@ -69,8 +109,15 @@ const Menu = () => {
 							/>
 						</svg>
 						<p>explore</p>
-					</div>
-					<div className={styles.link}>
+					</motion.div>
+					<motion.div
+						ref={itemThreeRef}
+						variants={moveToRight}
+						initial='hidden'
+						transition={{ duration: 1, delay: 0.7 }}
+						animate={itemThreeView ? 'visible' : 'hidden'}
+						className={styles.link}
+					>
 						<svg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35' fill='none'>
 							<path
 								d='M17.5771 2.69666C11.9361 2.69666 7.36047 7.18075 7.36047 12.709C7.36047 20.2182 17.5771 31.3033 17.5771 31.3033C17.5771 31.3033 27.7938 20.2182 27.7938 12.709C27.7938 7.18075 23.2182 2.69666 17.5771 2.69666ZM17.5771 16.2848C15.563 16.2848 13.9283 14.6829 13.9283 12.709C13.9283 10.7351 15.563 9.13316 17.5771 9.13316C19.5913 9.13316 21.226 10.7351 21.226 12.709C21.226 14.6829 19.5913 16.2848 17.5771 16.2848Z'
@@ -78,8 +125,15 @@ const Menu = () => {
 							/>
 						</svg>
 						<p>cities</p>
-					</div>
-					<div className={styles.link}>
+					</motion.div>
+					<motion.div
+						ref={itemFourRef}
+						variants={moveToLeft}
+						initial='hidden'
+						transition={{ duration: 1, delay: 0.75 }}
+						animate={itemFourView ? 'visible' : 'hidden'}
+						className={styles.link}
+					>
 						<svg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35' fill='none'>
 							<path
 								d='M12.9932 17.0278C12.9932 14.4808 15.058 12.4161 17.6049 12.4161C20.1519 12.4161 22.2166 14.4808 22.2166 17.0278C22.2166 19.5747 20.1519 21.6395 17.6049 21.6395C15.058 21.6395 12.9932 19.5747 12.9932 17.0278Z'
@@ -93,7 +147,7 @@ const Menu = () => {
 							/>
 						</svg>
 						<p>settings</p>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</nav>

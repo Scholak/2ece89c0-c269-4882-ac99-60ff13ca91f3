@@ -4,9 +4,17 @@ import {  LabelList, Line, LineChart, ResponsiveContainer } from 'recharts'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { DegreeLabel, HourLabel, WeatherLabel, WindLabel } from './Labels'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { moveToTop } from '../../animations/moveToTop'
 
 const HourlyForecast = () => {
   const { forecast } = useSelector((state: RootState) => state.weather)
+
+	const logoRef = useRef<HTMLImageElement>(null)
+
+	const logoView = useInView(logoRef)
+
   const data = [
 		{
 			pv: 100,
@@ -229,7 +237,16 @@ const HourlyForecast = () => {
 
   return (
 		<div className={styles.container}>
-			<img src={logo} alt='logo' className={styles.logo} />
+			<motion.img
+				src={logo}
+				alt='logo'
+				ref={logoRef}
+				variants={moveToTop}
+				initial='hidden'
+				transition={{ duration: 1, delay: 0.4 }}
+				animate={logoView ? 'visible' : 'hidden'}
+				className={styles.logo}
+			/>
 			<div className={styles.content}>
 				<div className={styles.title}>
 					<svg xmlns='http://www.w3.org/2000/svg' width='30' height='25' viewBox='0 0 30 25' fill='none'>
