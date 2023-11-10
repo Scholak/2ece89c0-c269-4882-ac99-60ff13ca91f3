@@ -22,9 +22,9 @@ main {
   display: grid;
   gap: 24px;
   grid-template-areas: 
-    "info info hourlyForecast"
-    "menu activities airConditions"
-    "menu weeklyForecast airConditions";
+  "info info hourlyForecast"
+  "menu activities airConditions"
+  "menu weeklyForecast airConditions";
   grid-template-columns: 3fr 9fr 7fr;
 }
 
@@ -38,7 +38,7 @@ main {
     height: auto;
     padding: 24px 18px;
   }
-
+  
   main {
     grid-template-areas: 
     "info info"
@@ -56,7 +56,7 @@ main {
   body {
     padding: 12px 8px;
   }
-
+  
   main {
     grid-template-areas: 
     "info"
@@ -67,6 +67,13 @@ main {
     "airConditions"
     "weeklyForecast";
     grid-template-columns: 1fr;
+  }
+  
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
   }
 }
 
