@@ -92,7 +92,7 @@ const HourlyForecast = () => {
 				</div>
 				<div className={styles.graph}>
 					<ResponsiveContainer width='100%' height='100%'>
-						<LineChart width={300} height={100} data={data} margin={{ top: 5, bottom: 5, left: 20, right: 20 }}>
+						<LineChart width={300} height={100} data={data} margin={{ top: 30, bottom: 0, left: 20, right: 20 }}>
 							<Line type='bump' dataKey='pv' stroke='#ffffff' dot={false}>
 								<LabelList content={<DegreeLabel />} dataKey='degree' />
 								<LabelList content={<WeatherLabel />} dataKey='icon' />
