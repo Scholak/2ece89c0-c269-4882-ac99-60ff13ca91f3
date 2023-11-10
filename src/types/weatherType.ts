@@ -105,3 +105,14 @@ export interface IWeatherType {
 		}
 	}
 }
+
+export interface IWeeklyWeatherType {
+	type: string
+	degree: string
+}
+
+export interface IPreparedWeeklyWeatherType {
+	day: string
+	type: string
+	degree: string
+}

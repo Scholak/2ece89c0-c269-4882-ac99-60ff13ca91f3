@@ -3,7 +3,10 @@ import styles from './WeeklyForecast.module.scss'
 import { RootState } from '../../redux/store'
 import Forecast from './Forecast'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/navigation'
+import { prepareWeeklyWeather } from '../../utils/prepareWeeklyWeather'
 
 const WeeklyForecast = () => {
   const { weeklyWeather } = useSelector((state: RootState) => state.weather)
@@ -13,46 +16,46 @@ const WeeklyForecast = () => {
 			<Swiper
 				spaceBetween={50}
 				slidesPerView={1}
-				navigation={{ prevEl: '.prev', nextEl: '.next' }}
+				initialSlide={1}
 				className={styles.slider}
+				modules={[Navigation]}
+				navigation
 			>
 				<SwiperSlide>
 					<div className={styles.sliderItem}>
-						<Forecast weather={weeklyWeather.previous.sunday} />
-						<Forecast weather={weeklyWeather.previous.monday} />
-						<Forecast weather={weeklyWeather.previous.tuesday} />
-						<Forecast weather={weeklyWeather.previous.wednesday} />
-						<Forecast weather={weeklyWeather.previous.thursday} />
-						<Forecast weather={weeklyWeather.previous.friday} />
-						<Forecast weather={weeklyWeather.previous.saturday} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.sunday, 'sunday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.monday, 'monday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.tuesday, 'tuesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.wednesday, 'wednesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.thursday, 'thursday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.friday, 'friday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.previous.saturday, 'saturday')} />
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className={styles.sliderItem}>
-						<Forecast weather={weeklyWeather.current.sunday} />
-						<Forecast weather={weeklyWeather.current.monday} />
-						<Forecast weather={weeklyWeather.current.tuesday} />
-						<Forecast weather={weeklyWeather.current.wednesday} />
-						<Forecast weather={weeklyWeather.current.thursday} />
-						<Forecast weather={weeklyWeather.current.friday} />
-						<Forecast weather={weeklyWeather.current.saturday} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.sunday, 'sunday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.monday, 'monday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.tuesday, 'tuesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.wednesday, 'wednesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.thursday, 'thursday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.friday, 'friday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.current.saturday, 'saturday')} />
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
 					<div className={styles.sliderItem}>
-						<Forecast weather={weeklyWeather.next.sunday} />
-						<Forecast weather={weeklyWeather.next.monday} />
-						<Forecast weather={weeklyWeather.next.tuesday} />
-						<Forecast weather={weeklyWeather.next.wednesday} />
-						<Forecast weather={weeklyWeather.next.thursday} />
-						<Forecast weather={weeklyWeather.next.friday} />
-						<Forecast weather={weeklyWeather.next.saturday} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.sunday, 'sunday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.monday, 'monday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.tuesday, 'tuesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.wednesday, 'wednesday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.thursday, 'thursday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.friday, 'friday')} />
+						<Forecast weather={prepareWeeklyWeather(weeklyWeather.next.saturday, 'saturday')} />
 					</div>
 				</SwiperSlide>
-				<div className='prev'>
-				</div>
-				<div className='next'>
-				</div>
+				<div className='prev'></div>
+				<div className='next'></div>
 			</Swiper>
 		</div>
 	)

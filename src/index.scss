@@ -28,6 +28,11 @@ main {
   grid-template-columns: 3fr 9fr 7fr;
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+  color: #ffffff;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 1600px) {
   body {
     height: auto;
