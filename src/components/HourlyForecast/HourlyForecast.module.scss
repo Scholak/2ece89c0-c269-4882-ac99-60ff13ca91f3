@@ -34,3 +34,16 @@
     }
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .container .content {
+    border-radius: 16px;
+    background: rgba(196, 195, 193, 0.75);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container .content {
+    border-radius: 8px;
+  }
+}

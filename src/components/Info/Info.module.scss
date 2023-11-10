@@ -44,11 +44,12 @@
 @media screen and (max-width: 1600px) {
   .container {
     justify-content: space-between;
-
+    border-radius: 16px;
+    
     .location p {
       font-size: 20px;
     }
-
+    
     .type {
       font-size: 24px;
     }
@@ -56,7 +57,7 @@
     .degree {
       font-size: 48px;
     }
-
+    
     .date {
       margin-left: 0;
     }
@@ -67,7 +68,8 @@
   .container {
     flex-direction: column;
     gap: 32px;
-
+    border-radius: 8px;
+    
     .date {
       font-size: 32px;
       text-align: center;

@@ -64,6 +64,7 @@
 @media screen and (max-width: 1600px) {
   .container {
     gap: 16px;
+    border-radius: 16px;
     
     .time {
       justify-content: center;
@@ -85,6 +86,7 @@
 @media screen and (max-width: 800px) {
   .container {
     gap: 16px;
+    border-radius: 8px;
     
     .time {
       gap: 12px;

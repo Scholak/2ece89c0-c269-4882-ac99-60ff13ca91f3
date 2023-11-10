@@ -23,7 +23,7 @@
       height: 100%;
       border-radius: 8px;
       overflow: hidden;
-
+      
       img {
         width: 100%;
         height: 100%;
@@ -35,13 +35,21 @@
 }
 
 @media screen and (max-width: 1600px) {
-  .container .activityImages {
-    grid-template-columns: repeat(2, 1fr);
+  .container {
+    border-radius: 16px;
+    
+    .activityImages {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
 @media screen and (max-width: 800px) {
-  .container .activityImages {
-    grid-template-columns: 1fr;
+  .container {
+    border-radius: 8px;
+    
+    .activityImages {
+      grid-template-columns: 1fr;
+    }
   }
 }

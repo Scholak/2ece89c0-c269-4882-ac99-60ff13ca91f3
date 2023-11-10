@@ -36,6 +36,7 @@ main {
 @media screen and (max-width: 1600px) {
   body {
     height: auto;
+    padding: 24px 18px;
   }
 
   main {
@@ -53,7 +54,7 @@ main {
 
 @media screen and (max-width: 800px) {
   body {
-    height: auto;
+    padding: 12px 8px;
   }
 
   main {
