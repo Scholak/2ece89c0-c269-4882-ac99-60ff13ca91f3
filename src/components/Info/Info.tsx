@@ -67,6 +67,7 @@ const Info = () => {
 				initial='hidden'
 				transition={{ duration: 1, delay: 0.3 }}
 				animate={iconView ? 'visible' : 'hidden'}
+				className={styles.thunderIcon}
 			/>
 			<motion.p
 				ref={dateRef}
